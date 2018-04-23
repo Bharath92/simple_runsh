@@ -10,6 +10,7 @@ jobs:
       container: false
     steps:
       - TASK:
-        - script: truncate -s 30G $(uuidgen)
+        - script: apt-get install xfsprogs
+        - script: xfs_mkfile 10240m $(uuidgen)
         - script: df -h
         - script: ls
