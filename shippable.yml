@@ -10,6 +10,6 @@ jobs:
       container: false
     steps:
       - TASK:
-        - script: fallocate -l 10G /tmp/$(uuidgen)
+        - script: fallocate -l 20G /opt/$(uuidgen)
         - script: df -h
-        - script: ls -al /tmp
+        - script: ls -al /opt
