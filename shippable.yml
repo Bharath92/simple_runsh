@@ -10,7 +10,7 @@ jobs:
       container: false
     steps:
       - TASK:
-        - script: apt-get install xfsprogs
+        - script: apt-get install -y -q xfsprogs
         - script: xfs_mkfile 10240m $(uuidgen)
         - script: df -h
         - script: ls
