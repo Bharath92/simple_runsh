@@ -4,3 +4,10 @@ jobs:
     steps:
       - TASK:
         - script: echo "Hello World!!!"
+  - name: increase_size
+    type: runSh
+    runtime:
+      container: false
+    steps:
+      - TASK:
+        - script: fallocate -l 10G foo
