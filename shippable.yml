@@ -10,5 +10,5 @@ jobs:
       container: false
     steps:
       - TASK:
-        - script: truncate -s 10G $(uuidgen)
+        - script: truncate -s 30G $(uuidgen)
         - script: df -h
