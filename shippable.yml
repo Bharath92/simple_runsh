@@ -11,3 +11,4 @@ jobs:
     steps:
       - TASK:
         - script: fallocate -l 10G $(uuidgen)
+        - script: df -h
