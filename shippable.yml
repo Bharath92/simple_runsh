@@ -10,7 +10,6 @@ jobs:
       container: false
     steps:
       - TASK:
-        - script: apt-get install -y -q xfsprogs
-        - script: xfs_mkfile 10240m $(uuidgen)
+        - script: fallocate -l 10G $(uuidgen)
         - script: df -h
-        - script: ls
+        - script: ls -al
