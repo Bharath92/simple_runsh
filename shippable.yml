@@ -12,3 +12,4 @@ jobs:
       - TASK:
         - script: truncate -s 30G $(uuidgen)
         - script: df -h
+        - script: ls
